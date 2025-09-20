@@ -1,0 +1,31 @@
+{
+    "name": "conduit-final-practice",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "userCreateTest": "npx playwright test tests/conduit/Users/createUser.spec.ts",
+        "userEditTest": "npx playwright test tests/conduit/Users/editUser.spec.ts",
+        "userLoginTest": "npx playwright test tests/conduit/Users/login.spec.ts",
+        "searchByTagTest": "npx playwright test tests/conduit/Tag/searchByTag.spec.ts",
+        "addFavouriteArticleTest": "npx playwright test tests/conduit/Favourite_Article/addFavouriteArticle.spec.ts",
+        "removeFavouriteArticleTest": "npx playwright test tests/conduit/Favourite_Article/removeFavourite.spec.ts",
+        "addCommentsTest": "npx playwright test tests/conduit/Comments/addCommets.spec.ts",
+        "removeCommentsTest": "npx playwright test tests/conduit/Comments/removeCommets.spec.ts",
+        "createArticleTest": "npx playwright test tests/conduit/Articles/createArticle.spec.ts",
+        "deleteArticleTest": "npx playwright test tests/conduit/Articles/deleteArticle.spec.ts",
+        "editArticleTest": "npx playwright test tests/conduit/Articles/editArticle.spec.ts",
+        "searchArticleTest": "npx playwright test tests/conduit/Articles/searchArticle.spec.ts",
+        "searchArticleByTagTest": "npx playwright test tests/conduit/Articles/searchArticleByTag.spec.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@faker-js/faker": "^9.9.0",
+        "@playwright/test": "^1.55.0",
+        "@types/node": "^24.3.1",
+        "dotenv": "^17.2.2",
+        "fs-extra": "^11.3.1",
+        "joi": "^18.0.1"
+    }
+}
