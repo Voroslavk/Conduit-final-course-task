@@ -91,7 +91,7 @@ export const test = base.extend<Fixtures>({
     },
 
     authorizedReq: async ({}, use) => {
-        dotenv.config()
+        dotenv.config({ quiet: true })
         const token = process.env.TOKEN
         const authorized = await request.newContext({
             extraHTTPHeaders: {
