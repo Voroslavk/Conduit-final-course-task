@@ -109,7 +109,7 @@ export const test = base.extend<Fixtures>({
                 title: faker.lorem.words(3),
                 description: faker.lorem.sentence(),
                 body: faker.lorem.paragraphs(1),
-                tagList: [faker.word.noun()]
+                tagList: ['testTag']
             }
         }
         const response = await authorizedReq.post('/api/articles', {
