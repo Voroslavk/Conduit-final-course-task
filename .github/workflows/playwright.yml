@@ -15,8 +15,8 @@ jobs:
                   node-version: lts/*
             - name: Install dependencies
               run: npm ci
-            - name: Install Playwright Browsers
-              run: npx playwright install --with-deps
+            # - name: Install Playwright Browsers
+            #   run: npx playwright install --with-deps
             - name: Run Users tests
               run: |
                   npx playwright test tests/conduit/Users/createUser.spec.ts
