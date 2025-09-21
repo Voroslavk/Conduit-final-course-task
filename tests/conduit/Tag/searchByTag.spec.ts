@@ -1,6 +1,6 @@
 import { test } from '../fixtures'
 import { expect } from '@playwright/test'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe('Search by tag', () => {
     test('SBT-001 article is succesfully found by tag', async ({ authorizedReq, articleCreation }) => {

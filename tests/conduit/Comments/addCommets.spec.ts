@@ -1,7 +1,7 @@
 import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe('Add comments', () => {
     test('AC-001 new comment successfully created', async ({ authorizedReq, articlesData, articleCreation }) => {

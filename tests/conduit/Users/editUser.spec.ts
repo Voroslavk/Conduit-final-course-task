@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe.serial('Edit user data', () => {
     let name: string

@@ -2,7 +2,7 @@ import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
 import { name } from '../userData.json'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe('Edit articles', () => {
     test('EDA-001 article can be edited successfully', async ({ authorizedReq, articlesData }) => {

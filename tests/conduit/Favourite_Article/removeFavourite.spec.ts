@@ -1,7 +1,7 @@
 import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 import { name } from '../userData.json'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe('Remove article from favourites', () => {
     test('RAFF-001 article is succesfully removed from favourites', async ({ authorizedReq, articlesData, articleCreation }) => {

@@ -2,7 +2,7 @@ import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
 import Joi from 'joi'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 test.describe('Create article', () => {
     test('CA-001 article creation is successful', async ({ authorizedReq }) => {

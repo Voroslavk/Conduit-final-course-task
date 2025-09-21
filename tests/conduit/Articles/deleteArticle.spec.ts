@@ -1,4 +1,4 @@
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 

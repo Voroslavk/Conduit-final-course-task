@@ -1,7 +1,7 @@
 import { test } from '../fixtures'
 import { expect } from '@playwright/test'
 import { faker } from '@faker-js/faker'
-import { APIClient } from '../../../app/APIclient'
+import { APIClient } from '../../../app/APIClient'
 
 let email = faker.internet.email({ firstName: 'lefansky', provider: 'gmail.com', allowSpecialCharacters: false })
 let password = faker.internet.password({ length: 5 })

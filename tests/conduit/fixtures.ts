@@ -1,7 +1,9 @@
 import { APIRequestContext, APIResponse, test as base, request } from '@playwright/test'
-import { token, name } from './userData.json'
+import { name } from './userData.json'
+import * as dotenv from 'dotenv'
 import { faker } from '@faker-js/faker'
 import fs from 'fs'
+import path from 'path'
 
 interface Author {
     username: string
@@ -77,14 +79,20 @@ export const test = base.extend<Fixtures>({
         let password = pass
         console.log(`Token obtained`)
 
-        const userData = { name, email, token, password }
+        const userData = { name, email, password }
         fs.writeFileSync('./tests/conduit/userData.json', JSON.stringify(userData, null, 2))
         console.log(`userData file created`)
+
+        const tokenData = `TOKEN=${token}\n`
+        fs.writeFileSync(path.resolve(__dirname, '../../.env'), tokenData, { flag: 'w' })
+        console.log(`.env file updated with new token`)
 
         await use({ token, name, email, password })
     },
 
     authorizedReq: async ({}, use) => {
+        dotenv.config()
+        const token = process.env.TOKEN
         const authorized = await request.newContext({
             extraHTTPHeaders: {
                 authorization: `Token ${token}`
